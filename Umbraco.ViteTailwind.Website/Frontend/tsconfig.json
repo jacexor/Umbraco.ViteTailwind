@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+
+    "module": "ESNext",
+
+    "moduleResolution": "Node",
+
+    "strict": true,
+
+    "baseUrl": ".",
+
+    "paths": {
+      "@/*": [ "scripts/*" ],
+      "@styles/*": [ "styles/*" ]
+    }
+  },
+
+  "include": [
+    "scripts",
+    "vite.config.ts"
+  ]
+}

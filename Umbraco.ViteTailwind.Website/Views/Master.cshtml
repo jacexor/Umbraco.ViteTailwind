@@ -1,0 +1,95 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.ViteTailwind.Helpers
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = null;
+
+    var theme = !string.IsNullOrEmpty(Model.AncestorOrSelf(Home.ModelTypeAlias).Value<string>("theme")) ?
+                        Model.AncestorOrSelf(Home.ModelTypeAlias).Value<string>("theme") : "theme-default";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Umbraco.ViteTailwind</title>
+
+    @Html.ViteAssets()
+</head>
+<body class="@theme min-h-screen bg-background text-foreground antialiased">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 border-b border-theme bg-background/80 backdrop-blur-xl">
+
+        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+
+            <!-- Brand -->
+            <div class="flex items-center gap-4">
+
+                <div class="bg-primary shadow-glow text-background flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-black">
+                    U
+                </div>
+
+                <div>
+
+                    <h1 class="text-lg font-bold tracking-tight">
+                        Umbraco.ViteTailwind
+                    </h1>
+
+                    <p class="text-muted text-sm">
+                        Modern frontend tooling for Umbraco CMS
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Navigation -->
+            <nav class="text-muted hidden items-center gap-8 text-sm font-medium md:flex">
+
+                <a href="#"
+                   class="hover-primary transition-colors">
+                    Docs
+                </a>
+
+                <a href="#"
+                   class="hover-primary transition-colors">
+                    GitHub
+                </a>
+
+                <a href="#"
+                   class="hover-primary transition-colors">
+                    NuGet
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    @RenderBody()
+
+    <!-- Footer -->
+    <footer class="border-theme border-t py-10">
+
+        <div class="mx-auto flex max-w-7xl flex-col gap-4 px-6 text-sm text-neutral-500 md:flex-row md:items-center md:justify-between">
+
+            <p>
+                © 2026 Umbraco.ViteTailwind
+            </p>
+
+            <p>
+                Built with Vite, TailwindCSS, and ASP.NET Core
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
+
+

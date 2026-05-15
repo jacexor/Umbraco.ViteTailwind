@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+.bg-background {
+    background: rgb(var(--background));
+}
+
+.bg-surface {
+    background: rgb(var(--surface));
+}
+
+.text-foreground {
+    color: rgb(var(--foreground));
+}
+
+.text-muted {
+    color: rgb(var(--muted));
+}
+
+.bg-primary {
+    background: rgb(var(--primary));
+}
+
+.text-primary {
+    color: rgb(var(--primary));
+}
+
+.border-theme {
+    border-color: rgba(var(--border), 0.1);
+}
+
+.hover-primary:hover {
+    color: rgb(var(--primary-hover));
+}
+
+.shadow-glow {
+    box-shadow: 0 0 30px rgba(var(--glow), 0.25);
+}
+
+
+@import 'themes/default.css';
+@import 'themes/lime.css';

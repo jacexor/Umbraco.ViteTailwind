@@ -1,0 +1,171 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    Layout = "Master.cshtml";
+}
+
+<!-- Hero -->
+<section class="relative overflow-hidden">
+
+    <!-- Background Glow -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.18),transparent_35%)]"></div>
+
+    <div class="relative mx-auto max-w-7xl px-6 py-32">
+
+        <div class="max-w-3xl">
+
+            <!-- Badge -->
+            <div class="border-primary-soft bg-primary-soft text-primary mb-8 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium">
+
+                <span>
+                    ⚡
+                </span>
+
+                <span>
+                    Vite + TailwindCSS for Umbraco 17
+                </span>
+
+            </div>
+
+            <!-- Title -->
+            <h2 class="max-w-2xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
+
+                Build modern
+
+                <span class="text-primary">
+                    Umbraco
+                </span>
+
+                frontend workflows
+
+            </h2>
+
+            <!-- Description -->
+            <p class="text-muted mt-8 max-w-2xl text-lg leading-8">
+
+                Fast HMR, TailwindCSS integration, Razor live reload,
+                optimized production builds, and modern developer experience
+                for Umbraco CMS.
+
+            </p>
+
+            <!-- Actions -->
+            <div class="mt-12 flex flex-wrap items-center gap-4">
+
+                <a href="#"
+                   class="bg-primary text-background shadow-glow hover:bg-[rgb(var(--primary-hover))] inline-flex items-center justify-center rounded-2xl px-6 py-3 text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5">
+
+                    Get Started
+
+                </a>
+
+                <a href="#"
+                   class="border-theme bg-surface hover:border-white/20 hover:bg-white/10 inline-flex items-center justify-center rounded-2xl border px-6 py-3 text-sm font-semibold transition-all duration-200">
+
+                    View GitHub
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Features -->
+<section class="border-theme border-t py-24">
+
+    <div class="mx-auto max-w-7xl px-6">
+
+        <!-- Section Heading -->
+        <div class="max-w-2xl">
+
+            <h3 class="text-3xl font-black tracking-tight">
+                Features
+            </h3>
+
+            <p class="text-muted mt-4 text-lg">
+                Everything needed for a modern Umbraco frontend workflow.
+            </p>
+
+        </div>
+
+        <!-- Feature Grid -->
+        <div class="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+
+            <!-- Feature Card -->
+            <div class="border-theme bg-surface group rounded-3xl border p-8 transition-all duration-200 hover:-translate-y-1 hover:border-blue-400/30 hover:bg-white/10">
+
+                <div class="mb-6 text-4xl">
+                    ⚡
+                </div>
+
+                <h4 class="group-hover:text-primary text-xl font-bold transition-colors">
+                    Vite HMR
+                </h4>
+
+                <p class="text-muted mt-4 leading-7">
+                    Instant frontend updates with lightning-fast development server.
+                </p>
+
+            </div>
+
+            <!-- Feature Card -->
+            <div class="border-theme bg-surface group rounded-3xl border p-8 transition-all duration-200 hover:-translate-y-1 hover:border-blue-400/30 hover:bg-white/10">
+
+                <div class="mb-6 text-4xl">
+                    🎨
+                </div>
+
+                <h4 class="group-hover:text-primary text-xl font-bold transition-colors">
+                    TailwindCSS
+                </h4>
+
+                <p class="text-muted mt-4 leading-7">
+                    Utility-first CSS workflow fully integrated with Razor views.
+                </p>
+
+            </div>
+
+            <!-- Feature Card -->
+            <div class="border-theme bg-surface group rounded-3xl border p-8 transition-all duration-200 hover:-translate-y-1 hover:border-blue-400/30 hover:bg-white/10">
+
+                <div class="mb-6 text-4xl">
+                    🔥
+                </div>
+
+                <h4 class="group-hover:text-primary text-xl font-bold transition-colors">
+                    Razor Reload
+                </h4>
+
+                <p class="text-muted mt-4 leading-7">
+                    Automatically reload Razor changes with hot reloads.
+                </p>
+
+            </div>
+
+            <!-- Feature Card -->
+            <div class="border-theme bg-surface group rounded-3xl border p-8 transition-all duration-200 hover:-translate-y-1 hover:border-blue-400/30 hover:bg-white/10">
+
+                <div class="mb-6 text-4xl">
+                    🚀
+                </div>
+
+                <h4 class="group-hover:text-primary text-xl font-bold transition-colors">
+                    Production Ready
+                </h4>
+
+                <p class="text-muted mt-4 leading-7">
+                    Optimized builds with asset manifest support and cache busting.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

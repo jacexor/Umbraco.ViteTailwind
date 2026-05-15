@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Umbraco.ViteTailwind.Website/Umbraco.ViteTailwind.Website.csproj" />
+  <Project Path="Umbraco.ViteTailwind/Umbraco.ViteTailwind.csproj" Id="50e6fd03-b073-4395-bed6-26ff637078b6" />
+</Solution>
