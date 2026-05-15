@@ -5,7 +5,7 @@ A modern starter setup for Umbraco using:
 - ⚡ Vite
 - 🎨 TailwindCSS
 - 🔥 Hot reload development workflow
-- 🖥️ Umbraco
+- 🖥️ Umbraco 17+
 
 Built to simplify modern frontend development inside Umbraco projects.
 
