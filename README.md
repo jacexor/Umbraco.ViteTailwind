@@ -1,592 +1,304 @@
-# \# Umbraco.ViteTailwind
+# Umbraco.ViteTailwind
 
-# 
+A modern starter setup for Umbraco using:
 
-# A modern starter setup for :contentReference\[oaicite:0]{index=0} using:
+- ⚡ Vite
+- 🎨 TailwindCSS
+- 🔥 Hot reload development workflow
+- 🖥️ Umbraco
 
-# 
+Built to simplify modern frontend development inside Umbraco projects.
 
-# \- ⚡ Vite
+---
 
-# \- 🎨 TailwindCSS
+# Features
 
-# \- 🔥 Hot reload development workflow
+- Fast frontend builds with Vite
+- TailwindCSS preconfigured
+- Automatic asset bundling
+- Hot reload for frontend development
+- Clean structure for Umbraco projects
+- Production-ready build pipeline
 
-# \- 🖥️ Umbraco
+---
 
-# 
+# Installation
 
-# Built to simplify modern frontend development inside Umbraco projects.
+## 1. Install the package
 
-# 
+```bash
+dotnet add package Umbraco.ViteTailwind
+```
 
-# \---
+---
 
-# 
+## 2. Install frontend dependencies
 
-# \# Features
+```bash
+npm install
+```
 
-# 
+---
 
-# \- Fast frontend builds with Vite
+## 3. Run development mode
 
-# \- TailwindCSS preconfigured
+```bash
+npm run dev
+```
 
-# \- Automatic asset bundling
+This will run:
 
-# \- Hot reload for frontend development
+- Umbraco via `dotnet watch`
+- Vite dev server
+- Tailwind watcher
 
-# \- Clean structure for Umbraco projects
+---
 
-# \- Production-ready build pipeline
+# Project Structure
 
-# 
+```txt
+Frontend/
+│
+├── scripts/
+│   │
+│   ├── blocks/
+│   ├── components/
+│   ├── core/
+│   ├── pages/
+│   ├── vendors/
+│   └── app.ts
+│
+├── styles/
+│   │
+│   ├── themes/
+│   └── app.css
+│
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+└── vite.config.ts
+```
 
-# \---
+---
 
-# 
+# Folder Overview
 
-# \# Installation
+## scripts/
 
-# 
+Contains all frontend TypeScript and JavaScript logic.
 
-# \## 1. Install the package
+### blocks/
 
-# 
+Reusable Umbraco block components.
 
-# ```bash
+Example:
 
-# dotnet add package Umbraco.ViteTailwind
+- Hero block
+- CTA block
+- Feature grid
 
-# ```
+### components/
 
-# 
+Shared UI components.
 
-# \---
+Example:
 
-# 
+- Navbar
+- Footer
+- Modal
+- Carousel
 
-# \## 2. Install frontend dependencies
+### core/
 
-# 
+Core frontend utilities and global setup.
 
-# ```bash
+Example:
 
-# npm install
+- API helpers
+- Event handlers
+- Config
+- Global initialization
 
-# ```
+### pages/
 
-# 
+Page-specific scripts.
 
-# \---
+Example:
 
-# 
+- Home page
+- Blog page
+- Landing page
 
-# \## 3. Run development mode
+### vendors/
 
-# 
+Third-party libraries and custom vendor integrations.
 
-# ```bash
+Example:
 
-# npm run dev
+- Swiper setup
+- GSAP config
+- AlpineJS plugins
 
-# ```
+### app.ts
 
-# 
+Frontend application entry point.
 
-# This will run:
+---
 
-# 
+# styles/
 
-# \- Umbraco via `dotnet watch`
+Contains all styling assets.
 
-# \- Vite dev server
+## themes/
 
-# \- Tailwind watcher
+Theme variations and separated design systems.
 
-# 
+Example:
 
-# \---
+- dark.css
+- light.css
+- corporate.css
 
-# 
+## app.css
 
-# \# Project Structure
+Main TailwindCSS and global styles entry.
 
-# 
+---
 
-# ```txt
+# Root Files
 
-# Frontend/
+## vite.config.ts
 
-# │
+Vite configuration.
 
-# │
+## tailwind.config.js
 
-# ├── scripts/
+TailwindCSS configuration.
 
-# │   │
+## tsconfig.json
 
-# │   ├── blocks/
+TypeScript configuration.
 
-# │   │
+## package.json
 
-# │   ├── components/
+Frontend dependencies and scripts.
 
-# │   │
+---
 
-# │   ├── core/
+# Recommended Architecture
 
-# │   │
+- Keep components reusable
+- Separate page logic from shared logic
+- Use blocks for Umbraco Block List editors
+- Keep vendor libraries isolated
+- Centralize app bootstrapping in `app.ts`
 
-# │   ├── pages/
+---
 
-# │   │
+# Example Import Structure
 
-# │   ├── vendors/
+```ts
+// app.ts
 
-# │   │
+import './styles/app.css'
 
-# │   └── app.ts
+import './components/navbar'
+import './pages/home'
+```
 
-# │
+---
 
-# ├── styles/
+# Available Scripts
 
-# │   │
+## Start Development
 
-# │   ├── themes/
+```bash
+npm run dev
+```
 
-# │   │
+## Run Only Vite
 
-# │   └── app.css
+```bash
+npm run frontend
+```
 
-# │
+## Run Only Umbraco
 
-# ├── package.json
+```bash
+npm run backend
+```
 
-# ├── tailwind.config.js
+## Production Build
 
-# ├── tsconfig.json
+```bash
+npm run build
+```
 
-# └── vite.config.ts
+---
 
-# ```
+# Tailwind Usage
 
-# 
+Example:
 
-# \---
+```html
+<div class="bg-blue-600 text-white p-6 rounded-xl">
+    Hello Umbraco + Tailwind
+</div>
+```
 
-# 
+---
 
-# \# Folder Overview
+# Using Assets in Razor
 
-# 
+Example:
 
-# \## scripts/
+```cshtml
+<link rel="stylesheet" href="/dist/main.css" />
+<script type="module" src="/dist/main.js"></script>
+```
 
-# 
+Or
 
-# Contains all frontend TypeScript and JavaScript logic.
+```cshtml
+@Html.ViteAssets()
+```
 
-# 
+---
 
-# \### blocks/
+# Development Workflow
 
-# Reusable Umbraco block components.
+Recommended workflow:
 
-# 
+1. Run Umbraco backend
+2. Run Vite frontend
+3. Develop using hot reload
+4. Build production assets using Vite
 
-# Example:
+---
 
-# \- Hero block
+# Goals
 
-# \- CTA block
+Umbraco.ViteTailwind aims to provide:
 
-# \- Feature grid
+- A clean modern frontend workflow
+- Better developer experience
+- Faster asset compilation
+- Easier frontend scaling for Umbraco projects
 
-# 
+---
 
-# \### components/
+# License
 
-# Shared UI components.
+MIT
 
-# 
+---
 
-# Example:
+# Contributing
 
-# \- Navbar
+Contributions, issues, and feature requests are welcome.
 
-# \- Footer
+---
 
-# \- Modal
+# Author
 
-# \- Carousel
-
-# 
-
-# \### core/
-
-# Core frontend utilities and global setup.
-
-# 
-
-# Example:
-
-# \- API helpers
-
-# \- Event handlers
-
-# \- Config
-
-# \- Global initialization
-
-# 
-
-# \### pages/
-
-# Page-specific scripts.
-
-# 
-
-# Example:
-
-# \- Home page
-
-# \- Blog page
-
-# \- Landing page
-
-# 
-
-# \### vendors/
-
-# Third-party libraries and custom vendor integrations.
-
-# 
-
-# Example:
-
-# \- Swiper setup
-
-# \- GSAP config
-
-# \- AlpineJS plugins
-
-# 
-
-# \### app.ts
-
-# Frontend application entry point.
-
-# 
-
-# \---
-
-# 
-
-# \# styles/
-
-# 
-
-# Contains all styling assets.
-
-# 
-
-# \## themes/
-
-# Theme variations and separated design systems.
-
-# 
-
-# Example:
-
-# \- dark.css
-
-# \- light.css
-
-# \- corporate.css
-
-# 
-
-# \## app.css
-
-# Main TailwindCSS and global styles entry.
-
-# 
-
-# \---
-
-# 
-
-# \# Root Files
-
-# 
-
-# \## vite.config.ts
-
-# Vite configuration.
-
-# 
-
-# \## tailwind.config.js
-
-# TailwindCSS configuration.
-
-# 
-
-# \## tsconfig.json
-
-# TypeScript configuration.
-
-# 
-
-# \## package.json
-
-# Frontend dependencies and scripts.
-
-# 
-
-# \---
-
-# 
-
-# \# Recommended Architecture
-
-# 
-
-# \- Keep components reusable
-
-# \- Separate page logic from shared logic
-
-# \- Use blocks for Umbraco Block List editors
-
-# \- Keep vendor libraries isolated
-
-# \- Centralize app bootstrapping in `app.ts`
-
-# 
-
-# \---
-
-# 
-
-# \# Example Import Structure
-
-# 
-
-# ```ts
-
-# // app.ts
-
-# 
-
-# import './styles/app.css'
-
-# 
-
-# import './components/navbar'
-
-# import './pages/home'
-
-# ```
-
-
-
-# \---
-
-# 
-
-# \# Available Scripts
-
-# 
-
-# \## Start Development
-
-# 
-
-# ```bash
-
-# npm run dev
-
-# ```
-
-# 
-
-# \## Run Only Vite
-
-# 
-
-# ```bash
-
-# npm run frontend
-
-# ```
-
-# 
-
-# \## Run Only Umbraco
-
-# 
-
-# ```bash
-
-# npm run backend
-
-# ```
-
-# 
-
-# \## Production Build
-
-# 
-
-# ```bash
-
-# npm run build
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \# Tailwind Usage
-
-# 
-
-# Example:
-
-# 
-
-# ```html
-
-# <div class="bg-blue-600 text-white p-6 rounded-xl">
-
-# &#x20;   Hello Umbraco + Tailwind
-
-# </div>
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \# Using Assets in Razor
-
-# 
-
-# Example:
-
-# 
-
-# ```cshtml
-
-# <link rel="stylesheet" href="/dist/main.css" />
-
-# <script type="module" src="/dist/main.js"></script>
-
-# ```
-
-
-
-# Or
-
-
-
-
-
-# ```cshtml
-
-# @Html.ViteAssets()
-
-# ```
-
-
-
-# 
-
-# \---
-
-# 
-
-# \# Development Workflow
-
-# 
-
-# Recommended workflow:
-
-# 
-
-# 1\. Run Umbraco backend
-
-# 2\. Run Vite frontend
-
-# 3\. Develop using hot reload
-
-# 4\. Build production assets using Vite
-
-# 
-
-# \---
-
-# 
-
-# \# Goals
-
-# 
-
-# Umbraco.ViteTailwind aims to provide:
-
-# 
-
-# \- A clean modern frontend workflow
-
-# \- Better developer experience
-
-# \- Faster asset compilation
-
-# \- Easier frontend scaling for Umbraco projects
-
-# 
-
-# \---
-
-# 
-
-# \# License
-
-# 
-
-# MIT
-
-# 
-
-# \---
-
-# 
-
-# \# Contributing
-
-# 
-
-# Contributions, issues, and feature requests are welcome.
-
-# 
-
-# \---
-
-# 
-
-# \# Author
-
-# 
-
-
-
-# Jace Maniquis
-
+Jace Maniquis
